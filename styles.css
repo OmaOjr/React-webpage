@@ -95,15 +95,7 @@ NAVBAR
 .nav__logo-text {
     font-size: 24px;
 
-}
-
-.nav__links {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    margin-left: auto;
-}
-
+    }
 .nav__close {
     display: none;
 }
@@ -150,6 +142,24 @@ NAVBAR
     cursor: pointer;
     color: #1a202c;
 
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap:24px;
+    margin-left: auto;
+}
+
+.nav__links {
+    margin-left: auto;
+
+}
+
+.nav__links.is-open .nav__list a {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 120ms;
 }
 
 
@@ -363,6 +373,20 @@ HERO section
 
     }
 
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav__list a {
+        display: block;
+        padding: 8px 0;
+    }
+
     .nav__links.is-open {
         opacity: 1;
         transform: translateX(0);
@@ -377,23 +401,24 @@ HERO section
         pointer-events: auto;
     }
 
-    .nav__links li {
+    .nav__list li {
   opacity: 0;
   transform: translateX(-16px);
   transition: opacity 600ms ease, transform 800ms ease;
 }
 
-.nav__links.is-open li {
+.nav__links.is-open .nav__list li {
   opacity: 1;
   transform: translateX(0);
+  transition-delay: 120ms;
 }
 
-.nav__links.is-open li:nth-child(2) { transition-delay: 80ms; }
-.nav__links.is-open li:nth-child(3) { transition-delay: 140ms; }
-.nav__links.is-open li:nth-child(4) { transition-delay: 200ms; }
-.nav__links.is-open li:nth-child(5) { transition-delay: 260ms; }
-.nav__links.is-open li:nth-child(6) { transition-delay: 320ms; }
-.nav__links.is-open li:nth-child(7) { transition-delay: 380ms; }
+.nav__links.is-open .nav__list li:nth-child(2) { transition-delay: 80ms; }
+.nav__links.is-open .nav__list li:nth-child(3) { transition-delay: 140ms; }
+.nav__links.is-open .nav__list li:nth-child(4) { transition-delay: 200ms; }
+.nav__links.is-open .nav__list li:nth-child(5) { transition-delay: 260ms; }
+.nav__links.is-open .nav__list li:nth-child(6) { transition-delay: 320ms; }
+.nav__links.is-open .nav__list li:nth-child(7) { transition-delay: 380ms; }
 
 
 
@@ -481,33 +506,26 @@ HERO section
 
 
 
-    .nav__links li {
+    .nav__list li {
     opacity: 0;
     transform: translateX(-16px);
     transition: opacity 600ms ease, transform 800ms ease;
 
     }
 
-    .nav__links.is-open li {
+    .nav__links.is-open .nav__list li {
     opacity: 1;
     transform: translateX(0);
     transition: opacity 600ms ease, transform 800ms ease;
 
     }
 
-
-.nav__links.is-open li:nth-child(2) { transition-delay: 80ms; }
-.nav__links.is-open li:nth-child(3) { transition-delay: 140ms; }
-.nav__links.is-open li:nth-child(4) { transition-delay: 200ms; }
-.nav__links.is-open li:nth-child(5) { transition-delay: 260ms; }
-.nav__links.is-open li:nth-child(6) { transition-delay: 320ms; }
-.nav__links.is-open li:nth-child(7) { transition-delay: 380ms; }
-
-    
-
-
-
-
+.nav__links.is-open .nav__list li:nth-child(2) { transition-delay: 80ms; }
+.nav__links.is-open .nav__list li:nth-child(3) { transition-delay: 140ms; }
+.nav__links.is-open .nav__list li:nth-child(4) { transition-delay: 200ms; }
+.nav__links.is-open .nav__list li:nth-child(5) { transition-delay: 260ms; }
+.nav__links.is-open .nav__list li:nth-child(6) { transition-delay: 320ms; }
+.nav__links.is-open .nav__list li:nth-child(7) { transition-delay: 380ms; }
 
     .nav__close:hover {
         transform: scale(1.08);

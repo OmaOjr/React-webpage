@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const pricingCards = document.querySelectorAll(".pricing__cards > article");
   pricingCards.forEach((card, index) => {
-    card.style.setProperty("--delay", `${120 + index * 120}ms`);
+ card.style.setProperty("--delay", `${120 + index * 120}ms`);
   });
 
   // Hamburger menu
@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const isOpen = navLinks.classList.toggle("is-open");
     toggleBtn.setAttribute("aria-expanded", String(isOpen));
     document.body.classList.toggle("menu-open", isOpen);
+  });
 
     if (closeBtn) {
       closeBtn.addEventListener("click", () => {
@@ -42,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.remove("menu-open");
       });
     }
-  });
 
 
   navLinks.addEventListener("click", (e) => {
